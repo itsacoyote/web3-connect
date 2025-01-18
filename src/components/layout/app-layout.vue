@@ -5,19 +5,15 @@ const links = [
     name: "Home",
     path: "/",
   },
-  {
-    name: "About",
-    path: "/about",
-  },
 ];
 </script>
 
 <template>
-  <div class="w-fit m-auto my-8">
+  <div class="w-full m-auto my-8">
     <header class="text-center py-8">
-      <IFluentBoxToolbox20Regular class="py-2 text-6xl m-auto" />
+      <IFluentWallet28Regular class="py-2 text-6xl m-auto" />
       <h1 class="font-bold text-2xl">
-        Starter Vue Project
+        Web3 Connect
       </h1>
       <div class="mt-2 text-md flex gap-2 justify-center">
         <RouterLink

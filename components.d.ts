@@ -16,8 +16,10 @@ declare module 'vue' {
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     IFluentBoxToolbox20Regular: typeof import('~icons/fluent/box-toolbox20-regular')['default']
+    IFluentWallet28Regular: typeof import('~icons/fluent/wallet28-regular')['default']
     IFluentWeatherMoon20Regular: typeof import('~icons/fluent/weather-moon20-regular')['default']
     IFluentWeatherSunny20Regular: typeof import('~icons/fluent/weather-sunny20-regular')['default']
+    ProviderConnectButton: typeof import('./src/components/provider-connect-button.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

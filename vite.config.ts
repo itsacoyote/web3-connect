@@ -42,7 +42,7 @@ export default defineConfig({
       dts: true,
       viteOptimizeDeps: true,
       vueTemplate: true,
-      dirs: ["./src/stores/**", "./src/composables/**"],
+      dirs: ["./src/stores/**", "./src/composables/**", "./src/utils/**"],
     }),
     Icons({}),
   ],

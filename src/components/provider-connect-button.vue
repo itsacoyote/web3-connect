@@ -13,36 +13,28 @@
       </div>
       <button
         class="border border-blue-600 bg-blue-600/20 hover:bg-blue-600/40 px-4 py-1 rounded-full text-white/90 hover:text-white focus:outline-none focus:ring focus:ring-blue-300 focus:text-white"
-        @click="connectProvider(provider)"
+        @click="connect()"
       >
         {{ connectButtonLabel }}
       </button>
-    </div>
-
-    <div
-      v-for="address in connectedWallets[provider.info.uuid]"
-      :key="address"
-    >
-      {{ formatAddress(address as Address) }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { Address, EIP6963ProviderDetail } from "../../env";
+import type { EIP6963ProviderDetail } from "../../env";
 
 const props = defineProps<{
   provider: EIP6963ProviderDetail;
 }>();
 
 const {
-  connectProvider, connectingInProgress, connected,
-} = useWallet();
-const { connectedWallets } = useWalletStore();
+  connect, inProgress, connected,
+} = useConnector(props.provider);
 const connectButtonLabel = computed(() => {
-  if (connectingInProgress.value) {
+  if (inProgress.value) {
     return "Connecting";
-  } else if (connected.value) {
+  } else if (connected) {
     return "Connected";
   } else {
     return "Connect";
